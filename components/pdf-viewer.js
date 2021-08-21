@@ -26,6 +26,7 @@ export default function Viewer() {
       },
       body: JSON.stringify({ type: 'click', created_at: new Date() }) 
     }).then(response => {
+      window.open('https://drive.google.com/file/d/1dGtop1Z20EyRtBihFbasW6T5DmLn07q2/view?usp=sharing', '_blank')
       console.log(response);
     }).catch(error => {
       console.log(error);
@@ -37,9 +38,6 @@ export default function Viewer() {
       <button onClick={() => openDocument()}>
         <p>Clique aqui para acessar o PDF!</p>
       </button>
-      {/* <a href={"https://drive.google.com/file/d/1dGtop1Z20EyRtBihFbasW6T5DmLn07q2/view?usp=sharing"} target='_blank' rel="noreferrer">
-        
-      </a> */}
     </div>
   );
 }

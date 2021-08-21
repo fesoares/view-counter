@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
+import styles from '../styles/Home.module.css'
 
 export default function Viewer() {
 
@@ -26,7 +27,6 @@ export default function Viewer() {
       },
       body: JSON.stringify({ type: 'click', created_at: new Date() }) 
     }).then(response => {
-      window.open('https://drive.google.com/file/d/1dGtop1Z20EyRtBihFbasW6T5DmLn07q2/view?usp=sharing', '_blank')
       console.log(response);
     }).catch(error => {
       console.log(error);
@@ -34,10 +34,8 @@ export default function Viewer() {
   }
 
   return (
-    <div>
-      <button onClick={() => openDocument()}>
-        <p>Clique aqui para acessar o PDF!</p>
-      </button>
+    <div className={styles.button}>
+      <a href="https://drive.google.com/file/d/1dGtop1Z20EyRtBihFbasW6T5DmLn07q2/view?usp=sharing" target="_blank" onClick={() => openDocument()} rel="noreferrer">Clique aqui para acessar o PDF!</a>
     </div>
   );
 }

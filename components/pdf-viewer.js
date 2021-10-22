@@ -35,7 +35,7 @@ export default function Viewer() {
 
   return (
     <div className={styles.button}>
-      <a href="https://drive.google.com/file/d/1dGtop1Z20EyRtBihFbasW6T5DmLn07q2/view?usp=sharing" target="_blank" onClick={() => openDocument()} rel="noreferrer">Clique aqui para acessar o PDF!</a>
+      <a href="https://drive.google.com/file/d/1fDgHcvKCG3BzeCPkLnbg35emri7jsoAm/view?usp=sharing" target="_blank" onClick={() => openDocument()} rel="noreferrer">Clique aqui para acessar o PDF!</a>
     </div>
   );
 }

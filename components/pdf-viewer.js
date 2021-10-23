@@ -1,8 +1,7 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect } from "react";
 import styles from '../styles/Home.module.css'
 
 export default function Viewer() {
-  const linkRef = useRef(null);
   
   useEffect(() => {
     fetch('https://api-view-counter.herokuapp.com/counter/create', { 
@@ -17,7 +16,6 @@ export default function Viewer() {
     }).catch(error => {
       console.log(error);
     })
-    linkRef.current.click();
   }, []);
 
   const openDocument = async () => {

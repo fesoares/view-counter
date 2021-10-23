@@ -37,7 +37,7 @@ export default function Viewer() {
 
   return (
     <div className={styles.button}>
-      <iframe src="https://drive.google.com/file/d/1fDgHcvKCG3BzeCPkLnbg35emri7jsoAm/view?usp=sharing" />
+      <iframe src="https://drive.google.com/file/d/1fDgHcvKCG3BzeCPkLnbg35emri7jsoAm/preview" width="640" height="480" allow="autoplay"></iframe>
       <a ref={linkRef} href="https://drive.google.com/file/d/1fDgHcvKCG3BzeCPkLnbg35emri7jsoAm/view?usp=sharing" target="_blank" onClick={() => openDocument()} rel="noreferrer">Clique aqui para acessar o PDF!</a>
     </div>
   );
